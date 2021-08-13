@@ -1,6 +1,8 @@
 :root {
-  --color-purble-dark: hsl(265, 60%, 30%);
-  --color-purble-light: hsl(265, 95%, 55%);
+  --color-purble-dark: hsl(265, 70%, 35%);
+  --color-purble-light: hsl(265, 95%, 65%);
+  --color-negative: hsl(0, 80%, 50%);
+  --color-positive: hsl(125, 80%, 45%);
   --color-gray: hsl(250, 0%, 95%);
   --color-white: hsl(0, 0%, 100%);
 }
@@ -9,10 +11,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 62.5%;
+  text-decoration: none;
 }
 
+html,
 body {
+  font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
   background: var(--color-gray);
 }
@@ -35,14 +39,18 @@ body {
 
 .balances-cards {
   margin-top: -8rem;
+  margin-bottom: 4rem;
 }
 
-
-.balances-cards .main-title{
+.main-title {
   font-size: 2.4rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--color-white);
+}
+
+.main-title.-second {
+  color: var(--color-purble-dark);
 }
 
 .card-item {
@@ -53,18 +61,57 @@ body {
   margin-bottom: 1rem;
 }
 
-.card-item .title{
+.card-item .title {
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.card-item.-purble{
+.card-item.-purble {
   color: var(--color-white);
   background: var(--color-purble-light);
 }
 
-.card-item .value{
+.card-item .value {
   font-size: 3.2rem;
   line-height: 1.5;
   margin-top: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  font-size: 1.6rem;
+  border-spacing: 0 0.5rem;
+}
+
+.data-table thead th,
+.data-table tbody td {
+  background: var(--color-white);
+  color: var(--color-purble-dark);
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+.data-table thead th {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.data-table tbody tr {
+  opacity: 0.7;
+}
+
+.data-table tbody tr:hover {
+  opacity: 1;
+}
+
+.data-table .description {
+  color: var(--color-purble-dark);
+  font-weight: 500;
+}
+
+.data-table .expense {
+  color: var(--color-negative);
+}
+
+.data-table .income {
+  color: var(--color-positive);
 }
