@@ -1,0 +1,70 @@
+:root {
+  --color-purble-dark: hsl(265, 60%, 30%);
+  --color-purble-light: hsl(265, 95%, 55%);
+  --color-gray: hsl(250, 0%, 95%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-gray);
+}
+
+.navegation {
+  background: var(--color-purble-dark);
+  padding: 2rem 0 12rem;
+  text-align: center;
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 3.2rem;
+}
+
+.container {
+  width: min(90vw, 1334px);
+  margin: 0 auto;
+}
+
+.balances-cards {
+  margin-top: -8rem;
+}
+
+
+.balances-cards .main-title{
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.card-item {
+  background: var(--color-white);
+  color: var(--color-purble-dark);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-item .title{
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.card-item.-purble{
+  color: var(--color-white);
+  background: var(--color-purble-light);
+}
+
+.card-item .value{
+  font-size: 3.2rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}

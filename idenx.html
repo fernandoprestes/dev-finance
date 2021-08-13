@@ -5,31 +5,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
-    <header>
-      <h1>dev.finance</h1>
+    <header class="navegation">
+      <h1 class="logo">dev.finance</h1>
     </header>
-    <main>
-      <section>
-        <h2>Balanço</h2>
-        <div>
-          <h3>Entradas</h3>
-          <p>R$ 5.000,00</p>
+
+    <main class="container">
+      <section class="balances-cards">
+        <h2 class="main-title">Balanço</h2>
+        <div class="card-item">
+          <h3 class="title">Entradas</h3>
+          <p class="value">R$ 5.000,00</p>
         </div>
-        <div>
-          <h3>Saidas</h3>
-          <p>R$ 5.000,00</p>
+        <div class="card-item">
+          <h3 class="title">Saidas</h3>
+          <p class="value">R$ 5.000,00</p>
         </div>
-        <div>
-          <h3>Total</h3>
-          <p>R$ 5.000,00</p>
+        <div class="card-item -purble">
+          <h3 class="title">Total</h3>
+          <p class="value">R$ 5.000,00</p>
         </div>
       </section>
 
-      <section>
-        <h2>Transações</h2>
-        <table>
+      <section class="transactions">
+        <h2 class="title">Transações</h2>
+        <table class="data-table">
           <thead>
             <tr>
               <th>Descrição</th>
