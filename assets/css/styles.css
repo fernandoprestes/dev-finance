@@ -1,10 +1,10 @@
 :root {
-  --color-purble-dark: hsl(265, 70%, 35%);
-  --color-purble-light: hsl(265, 95%, 65%);
+  --color-primary-dark: hsl(265, 70%, 35%);
+  --color-primary-light: hsl(265, 95%, 65%);
   --color-negative: hsl(0, 80%, 50%);
   --color-positive: hsl(125, 80%, 45%);
-  --color-gray: hsl(250, 0%, 95%);
-  --color-white: hsl(0, 0%, 100%);
+  --color-bg-body: hsl(250, 0%, 95%);
+  --color-bg-cards: hsl(0, 0%, 100%);
 }
 
 * {
@@ -18,7 +18,7 @@ html,
 body {
   font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
-  background: var(--color-gray);
+  background: var(--color-bg-body);
 }
 
 .sr-only {
@@ -34,7 +34,7 @@ body {
 }
 
 .navegation {
-  background: var(--color-purble-dark);
+  background: var(--color-primary-dark);
   padding: 2rem 0 13rem;
   text-align: center;
 }
@@ -53,12 +53,12 @@ body {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: var(--color-purble-dark);
+  color: var(--color-primary-dark);
 }
 
 .card-item {
-  background: var(--color-white);
-  color: var(--color-purble-dark);
+  background: var(--color-bg-cards);
+  color: var(--color-primary-dark);
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -76,8 +76,8 @@ body {
 }
 
 .card-item.-purble {
-  color: var(--color-white);
-  background: var(--color-purble-light);
+  color: var(--color-bg-cards);
+  background: var(--color-primary-light);
 }
 
 .card-value {
@@ -94,13 +94,17 @@ body {
 
 .datatable thead th,
 .datatable tbody td {
-  background: var(--color-white);
+  background: var(--color-bg-cards);
   text-align: left;
   padding: 1rem 2rem;
 }
 
-.datatable-title {
-  border-radius: 0.5rem 0.5rem 0 0;
+.datatable-title:first-child {
+  border-radius: .5rem 0 0 0;
+}
+
+.datatable-title:last-child{
+  border-radius: 0 .5rem 0 0;
 }
 
 .datatable tbody tr {
@@ -112,7 +116,7 @@ body {
 }
 
 .datatable-description {
-  color: var(--color-purble-dark);
+  color: var(--color-primary-dark);
   font-weight: 500;
 }
 
@@ -125,5 +129,21 @@ body {
 }
 
 .datatable-date {
-  color: var(--color-purble-dark);
+  color: var(--color-primary-dark);
+}
+
+.button{
+  display: inline-block;
+  margin-bottom: .8rem;
+  font-size: 1.6rem;
+  color: var(--color-primary-light)
+}
+
+.button:hover{
+  color: var(--color-primary-dark);
+}
+
+.button::before{
+  content: '+';
+  margin-right: .5rem;
 }
