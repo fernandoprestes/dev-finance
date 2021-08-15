@@ -21,15 +21,22 @@ body {
   background: var(--color-gray);
 }
 
-.navegation {
-  background: var(--color-purble-dark);
-  padding: 2rem 0 12rem;
-  text-align: center;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
-.logo {
-  color: var(--color-white);
-  font-size: 3.2rem;
+.navegation {
+  background: var(--color-purble-dark);
+  padding: 2rem 0 13rem;
+  text-align: center;
 }
 
 .container {
@@ -46,10 +53,6 @@ body {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: var(--color-white);
-}
-
-.main-title.-second {
   color: var(--color-purble-dark);
 }
 
@@ -64,6 +67,12 @@ body {
 .card-title {
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.title-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-item.-purble {
@@ -90,7 +99,7 @@ body {
   padding: 1rem 2rem;
 }
 
-.datatable-title{
+.datatable-title {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -115,6 +124,6 @@ body {
   color: var(--color-positive);
 }
 
-.datatable-date{
-  color: var(--color-purble-dark)
+.datatable-date {
+  color: var(--color-purble-dark);
 }
