@@ -37,7 +37,7 @@ body {
   margin: 0 auto;
 }
 
-.balances-cards {
+.balances {
   margin-top: -8rem;
   margin-bottom: 4rem;
 }
@@ -61,7 +61,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.card-item .title {
+.card-title {
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -71,47 +71,50 @@ body {
   background: var(--color-purble-light);
 }
 
-.card-item .value {
+.card-value {
   font-size: 3.2rem;
   line-height: 1.5;
   margin-top: 1rem;
 }
 
-.data-table {
+.datatable {
   width: 100%;
   font-size: 1.6rem;
   border-spacing: 0 0.5rem;
 }
 
-.data-table thead th,
-.data-table tbody td {
+.datatable thead th,
+.datatable tbody td {
   background: var(--color-white);
-  color: var(--color-purble-dark);
   text-align: left;
   padding: 1rem 2rem;
 }
 
-.data-table thead th {
+.datatable-title{
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.data-table tbody tr {
+.datatable tbody tr {
   opacity: 0.7;
 }
 
-.data-table tbody tr:hover {
+.datatable tbody tr:hover {
   opacity: 1;
 }
 
-.data-table .description {
+.datatable-description {
   color: var(--color-purble-dark);
   font-weight: 500;
 }
 
-.data-table .expense {
+.datatable-expense {
   color: var(--color-negative);
 }
 
-.data-table .income {
+.datatable-income {
   color: var(--color-positive);
+}
+
+.datatable-date{
+  color: var(--color-purble-dark)
 }
