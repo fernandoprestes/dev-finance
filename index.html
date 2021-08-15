@@ -46,7 +46,7 @@
 
       <section class="transactions">
         <h2 class="main-title sr-only">Transações</h2>
-        <a href="#" class="button">Nova Transação</a>
+        <a href="#" class="button -plus" onclick="Modal.open()">Nova Transação</a>
         <table class="datatable">
           <thead>
             <tr>
@@ -61,26 +61,65 @@
               <td class="datatable-description">Luz</td>
               <td class="datatable-expense">- R$ 541,21</td>
               <td class="datatable-date">23/04/2015</td>
-              <td><img src="./assets/img/minus.svg" alt="Remover transação"></td>
+              <td class="datatable-icon">
+                <img src="./assets/img/minus.svg" alt="Remover transação" />
+              </td>
             </tr>
             <tr>
               <td class="datatable-description">Criação de alguma coisa</td>
               <td class="datatable-income">R$ 1278,21</td>
               <td class="datatable-date">26/04/2015</td>
-              <td><img src="./assets/img/minus.svg" alt="Remover transação"></td>
+              <td class="datatable-icon">
+                <img src="./assets/img/minus.svg" alt="Remover transação" />
+              </td>
             </tr>
             <tr>
               <td class="datatable-description">Internet</td>
               <td class="datatable-expense">- R$ 78,37</td>
               <td class="datatable-date">27/04/2015</td>
-              <td><img src="./assets/img/minus.svg" alt="Remover transação"></td>
+              <td class="datatable-icon">
+                <img src="./assets/img/minus.svg" alt="Remover transação" />
+              </td>
             </tr>
           </tbody>
         </table>
       </section>
     </main>
+    <div class="modal-overlay">
+      <div class="modal-card">
+        <div class="model-content">
+          <h1 class="main-title">Nova transação</h1>
+          
+          <form class="form" action="#" method="POST">
+            <div class="wrapper-input">
+              <label class="sr-only" for="description">Descrição</label>
+              <input class="form-input" type="text" name="description" id="description" placeholder="Descrição" />
+            </div>
+
+            <div class="wrapper-input">
+              <label class="sr-only" for="amount">Descrição</label>
+              <input class="form-input" type="number" name="amount" id="amount" placeholder="R$ 0.00" />
+            </div>
+            
+            <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+
+            <div class="wrapper-input">
+              <label class="sr-only" for="data">data transação</label>
+              <input class="form-input" type="date" name="data" id="data" placeholder="dd/mm/aaaa"/>
+            </div>
+            
+            <div class="wrapper-buttons">
+              <a href="#" class="button -cancel" onclick="Modal.close()">Cancelar</a>
+              <button class="button -send">Salvar</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
     <footer>
       <p>2021 - dev.finance</p>
     </footer>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
