@@ -1,6 +1,6 @@
 :root {
-  --color-primary-dark: hsl(265, 70%, 35%);
-  --color-primary-light: hsl(265, 95%, 65%);
+  --color-primary-dark: hsl(265, 70%, 30%);
+  --color-primary-light: hsl(265, 70%, 60%);
   --color-negative: hsl(0, 80%, 50%);
   --color-positive: hsl(125, 80%, 45%);
   --color-bg-body: hsl(250, 0%, 95%);
@@ -62,7 +62,7 @@ body {
   color: var(--color-primary-dark);
   padding: 2rem 2rem;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .card-title {
@@ -136,6 +136,10 @@ body {
 
 .datatable-date {
   color: var(--color-primary-dark);
+}
+
+.datatable-icon:hover{
+  cursor: pointer;
 }
 
 

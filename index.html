@@ -26,27 +26,27 @@
             <h3 class="card-title">Entradas</h3>
             <img src="./assets/img/income.svg" alt="icon-entradas" />
           </div>
-          <p class="card-value">R$ 5.000,00</p>
+          <p id="incomeDisplay" class="card-value">R$ 0,00</p>
         </div>
         <div class="card-item">
           <div class="title-wrapper">
             <h3 class="card-title">Saidas</h3>
             <img src="./assets/img/expense.svg" alt="icon-saidas" />
           </div>
-          <p class="card-value">R$ 5.000,00</p>
+          <p id="expenseDisplay" class="card-value">R$ 0,00</p>
         </div>
         <div class="card-item -purble">
           <div class="title-wrapper">
             <h3 class="card-title">Total</h3>
             <img src="./assets/img/total.svg" alt="icon-total" />
           </div>
-          <p class="card-value">R$ 5.000,00</p>
+          <p id="totalDisplay" class="card-value">R$ 0,00</p>
         </div>
       </section>
 
       <section class="transactions">
         <h2 class="main-title sr-only">Transações</h2>
-        <a href="#" class="button -plus" onclick="Modal.open()">Nova Transação</a>
+        <a href="#" class="button -plus" onclick="modal()">Nova Transação</a>
         <table class="datatable">
           <thead>
             <tr>
@@ -56,31 +56,7 @@
               <th class="datatable-title">Deletar</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td class="datatable-description">Luz</td>
-              <td class="datatable-expense">- R$ 541,21</td>
-              <td class="datatable-date">23/04/2015</td>
-              <td class="datatable-icon">
-                <img src="./assets/img/minus.svg" alt="Remover transação" />
-              </td>
-            </tr>
-            <tr>
-              <td class="datatable-description">Criação de alguma coisa</td>
-              <td class="datatable-income">R$ 1278,21</td>
-              <td class="datatable-date">26/04/2015</td>
-              <td class="datatable-icon">
-                <img src="./assets/img/minus.svg" alt="Remover transação" />
-              </td>
-            </tr>
-            <tr>
-              <td class="datatable-description">Internet</td>
-              <td class="datatable-expense">- R$ 78,37</td>
-              <td class="datatable-date">27/04/2015</td>
-              <td class="datatable-icon">
-                <img src="./assets/img/minus.svg" alt="Remover transação" />
-              </td>
-            </tr>
+          <tbody class="datatable-body">
           </tbody>
         </table>
       </section>
@@ -89,30 +65,50 @@
       <div class="modal-card">
         <div class="model-content">
           <h1 class="main-title">Nova transação</h1>
-          
-          <form class="form" action="#" method="POST">
+
+          <form class="form" onsubmit="Form.submit(event)"> 
             <div class="wrapper-input">
               <label class="sr-only" for="description">Descrição</label>
-              <input class="form-input" type="text" name="description" id="description" placeholder="Descrição" />
+              <input
+                class="form-input"
+                type="text"
+                name="description"
+                id="description"
+                placeholder="Descrição"
+              />
             </div>
 
             <div class="wrapper-input">
-              <label class="sr-only" for="amount">Descrição</label>
-              <input class="form-input" type="number" name="amount" id="amount" placeholder="R$ 0.00" />
+              <label class="sr-only" for="amount">Valor</label>
+              <input
+                class="form-input"
+                type="text"
+                name="amount"
+                id="amount"
+                placeholder="R$ 0.00"
+              />
             </div>
-            
-            <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+
+            <small class="help"
+              >Use o sinal (-) negativo para despesas e (,) virgula para casas
+              decimais</small
+            >
 
             <div class="wrapper-input">
-              <label class="sr-only" for="data">data transação</label>
-              <input class="form-input" type="date" name="data" id="data" placeholder="dd/mm/aaaa"/>
+              <label class="sr-only" for="date">data transação</label>
+              <input
+                class="form-input"
+                type="date"
+                name="date"
+                id="date"
+                placeholder="dd/mm/aaaa"
+              />
             </div>
-            
+
             <div class="wrapper-buttons">
-              <a href="#" class="button -cancel" onclick="Modal.close()">Cancelar</a>
+              <a href="#" class="button -cancel" onclick="modal()">Cancelar</a>
               <button class="button -send">Salvar</button>
             </div>
-            
           </form>
         </div>
       </div>
