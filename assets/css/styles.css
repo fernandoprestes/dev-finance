@@ -142,7 +142,6 @@ body {
   cursor: pointer;
 }
 
-
 .button {
   display: inline-block;
   margin-bottom: 0.8rem;
@@ -241,6 +240,17 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.footer{
+  text-align: center;
+}
+
+.footer-copyright{
+  font-size: 1.4rem;
+  color: var(--color-primary-light);
+}
+
+
 
 @media (min-width: 800px) {
   html {
